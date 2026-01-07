@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator - Sustainable Eating Guide</title>
+    <link rel="stylesheet" href="assignment3.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Sustainable Eating Guide</h1>
+            <ul class="nav-links">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <h2>Carbon Footprint Calculator</h2>
+        
+        <div class="calculator-wrapper">
+            <div class="calculator-form">
+                <p class="calculator-intro">Estimate the carbon footprint of your weekly food consumption.</p>
+                
+                <form id="carbonForm">
+                    <div class="form-group">
+                        <label for="meat">Servings of meat per week:</label>
+                        <input type="number" id="meat" name="meat" min="0" value="0" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dairy">Servings of dairy per week:</label>
+                        <input type="number" id="dairy" name="dairy" min="0" value="0" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vegetables">Servings of vegetables per week:</label>
+                        <input type="number" id="vegetables" name="vegetables" min="0" value="0" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grains">Servings of grains per week:</label>
+                        <input type="number" id="grains" name="grains" min="0" value="0" />
+                    </div>
+
+                    <button type="button" id="calculateBtn" class="card-btn">Calculate</button>
+                </form>
+            </div>
+
+            <!-- Right Column: Results -->
+            <div class="calculator-results">
+                <div id="result" class="result-box">
+                    <div style="text-align: center; padding: 40px 20px;">
+                        <div style="font-size: 4rem; margin-bottom: 20px;">📊</div>
+                        <h3 style="color: #2d6a4f; margin-bottom: 15px;">Your Results Will Appear Here</h3>
+                        <p style="color: #666;">Fill in the form and click Calculate to see your estimated carbon footprint.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Sustainable Eating Guide. All rights reserved.</p>
+            <p>Eat Smart • Live Green • Save the Planet</p>
+        </div>
+    </footer>
+
+    <script src="assignment3.js"></script>
+
+</body>
+</html>

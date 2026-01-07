@@ -1,0 +1,592 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #52b788;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 80%;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(82, 183, 136, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(45, 106, 79, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.hero-text {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    color: #1b4332;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.hero-text p {
+    color: #2d6a4f;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+#exploreBtn {
+    display: inline-block;
+    background: linear-gradient(135deg, #52b788 0%, #40916c 100%);
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(82, 183, 136, 0.4);
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+#exploreBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(82, 183, 136, 0.5);
+    background: linear-gradient(135deg, #40916c 0%, #2d6a4f 100%);
+}
+
+#exploreBtn:active {
+    transform: translateY(-1px);
+}
+
+/* Dashboard Cards */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 35px 30px;
+    width: 300px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(45, 106, 79, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 32px rgba(45, 106, 79, 0.2);
+}
+
+.card h3 {
+    color: #1b4332;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.card-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 12px rgba(45, 106, 79, 0.3);
+}
+
+.card-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(45, 106, 79, 0.4);
+    background: linear-gradient(135deg, #1b4332 0%, #081c15 100%);
+}
+
+/* Content Section Styles */
+.content-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.content-section h2 {
+    color: #1b4332;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #52b788 0%, #2d6a4f 100%);
+    border-radius: 2px;
+}
+
+/* Recipe Page Styles */
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.recipe-item {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #52b788;
+}
+
+.recipe-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.recipe-item h3 {
+    color: #1b4332;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.recipe-item p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.recipe-item p strong {
+    color: #2d6a4f;
+    font-weight: 600;
+}
+
+/* Tips Page Styles */
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tip-item {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 5px solid #52b788;
+    position: relative;
+}
+
+.tip-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.tip-item h3 {
+    color: #1b4332;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.tip-item p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 0.98rem;
+}
+
+/* Calculator Page Styles - 2 Column Layout */
+.calculator-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calculator-form {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+.calculator-intro {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.calculator-results {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #1b4332;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #d8f3dc;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #52b788;
+    box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.1);
+}
+
+.result-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    min-height: 400px;
+}
+
+/* About Page Styles */
+.about-content {
+    background: white;
+    padding: 45px;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h3 {
+    color: #1b4332;
+    margin-top: 35px;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-left: 20px;
+}
+
+.about-content h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 70%;
+    background: linear-gradient(180deg, #52b788 0%, #2d6a4f 100%);
+    border-radius: 3px;
+}
+
+.about-content h3:first-child {
+    margin-top: 0;
+}
+
+.about-content p {
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 18px;
+    font-size: 1rem;
+}
+
+.about-list {
+    color: #555;
+    line-height: 1.9;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.about-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.about-list li::marker {
+    color: #52b788;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer-content p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.footer-content p:first-child {
+    font-weight: 500;
+}
+
+.footer-content p:last-child {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .dashboard {
+        padding: 40px 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .content-section h2 {
+        font-size: 2rem;
+    }
+
+    .recipe-list {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .calculator-results {
+        position: static;
+    }
+
+    .calculator-form,
+    .about-content {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.6rem;
+    }
+
+    #exploreBtn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* Login Page Styles */
+.password-container {
+    position: relative;
+}
+
+.show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}

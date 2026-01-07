@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="assignment3.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Sustainable Eating Guide</h1>
+        <ul class="nav-links">
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="content-section">
+    <h2>Login</h2>
+
+    <div class="about-content" style="max-width: 350px; margin: auto;">
+        <form action="login.php" method="post">
+
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <div class="password-container">
+                    <input type="password" name="password" id="password" required>
+                    <span class="show-password" id="showPassword">👁️</span>
+                </div>
+            </div>
+
+            <button type="submit" class="card-btn">
+                Login
+            </button>
+
+        </form>
+        
+        <p id="message" class="message"></p>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Sustainable Eating Guide</p>
+    </div>
+</footer>
+
+<script src="assignment3.js"></script>
+
+</body>
+</html>

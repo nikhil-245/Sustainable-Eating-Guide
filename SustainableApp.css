@@ -1,0 +1,331 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f8f2;
+}
+
+.app {
+  width: 100%;
+}
+
+/* Header */
+.header {
+  background-color: #2d6a4f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 15px;
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e8f5e9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #2d6a4f;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  color: #2d6a4f;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Recipes Section */
+.recipes {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.recipes h2 {
+  text-align: center;
+  color: #2d6a4f;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.recipe-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe h3 {
+  color: #2d6a4f;
+  margin-bottom: 10px;
+}
+
+.recipe p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Tips Section */
+.tips {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.tips h2 {
+  text-align: center;
+  color: #2d6a4f;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.tip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tip {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #52b788;
+}
+
+.tip h3 {
+  color: #2d6a4f;
+  margin-bottom: 10px;
+}
+
+.tip p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Calculator Section */
+.calculator {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.calculator h2 {
+  text-align: center;
+  color: #2d6a4f;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.calculator-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.calculator-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-form h3 {
+  color: #2d6a4f;
+  margin-bottom: 20px;
+}
+
+.calculator-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #2d6a4f;
+  font-weight: bold;
+}
+
+.calculator-form input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #d8f3dc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.calculator-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #2d6a4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.calculator-form button:hover {
+  background-color: #1b4332;
+}
+
+.calculator-result {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.result-box {
+  width: 100%;
+}
+
+.result-box h3 {
+  color: #2d6a4f;
+  margin-bottom: 15px;
+}
+
+.result-box p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.about h2 {
+  text-align: center;
+  color: #2d6a4f;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.about-content {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h3 {
+  color: #2d6a4f;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.about-content h3:first-child {
+  margin-top: 0;
+}
+
+.about-content p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about-content ul {
+  margin-left: 30px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.about-content li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #2d6a4f;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calculator-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
